@@ -1,0 +1,33 @@
+
+
+/* ==========================================================================
+   Author's custom styles
+   ========================================================================== */
+
+body {
+    padding-top: 50px;
+    padding-bottom: 20px;
+}
+
+table.table td.final {
+    background-color: #428BCA;
+    border-color: #428BCA;
+    color: #FFFFFF;
+    z-index: 2;
+    text-align: center;
+}
+
+table.table tr.strike td {
+    text-decoration:line-through;
+    color: #BBBBBB;
+}
+
+div.logout {
+    margin-top: 8px;
+    color: #FFF;
+    float: right;
+}
+
+.form-control {
+    width: auto;
+}

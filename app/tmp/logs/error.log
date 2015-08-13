@@ -1,0 +1,49 @@
+2013-12-27 23:07:23 Error: [MissingActionException] Action TestsController::js() could not be found.
+Exception Attributes: array (
+  'controller' => 'TestsController',
+  'action' => 'js',
+)
+Request URL: /tests/js/vendor/jquery-1.10.1.min.js
+Stack Trace:
+#0 /var/www/html/cakebudget/lib/Cake/Routing/Dispatcher.php(185): Controller->invokeAction(Object(CakeRequest))
+#1 /var/www/html/cakebudget/lib/Cake/Routing/Dispatcher.php(160): Dispatcher->_invoke(Object(TestsController), Object(CakeRequest), Object(CakeResponse))
+#2 /var/www/html/cakebudget/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2013-12-28 12:23:09 Error: [MissingViewException] View file "/var/www/html/cakebudget/app/View/Users/login.ctp" is missing.
+Exception Attributes: array (
+  'file' => '/var/www/html/cakebudget/app/View/Users/login.ctp',
+)
+Request URL: /users/login
+Stack Trace:
+#0 /var/www/html/cakebudget/lib/Cake/View/View.php(457): View->_getViewFileName(NULL)
+#1 /var/www/html/cakebudget/lib/Cake/Controller/Controller.php(952): View->render(NULL, NULL)
+#2 /var/www/html/cakebudget/lib/Cake/Routing/Dispatcher.php(192): Controller->render()
+#3 /var/www/html/cakebudget/lib/Cake/Routing/Dispatcher.php(160): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest), Object(CakeResponse))
+#4 /var/www/html/cakebudget/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2015-08-13 10:14:25 Error: [MissingConnectionException] Database connection "Mysql" is missing, or could not be created.
+Exception Attributes: array (
+  'class' => 'Mysql',
+  'message' => 'SQLSTATE[28000] [1045] Access denied for user \'root\'@\'localhost\' (using password: YES)',
+  'enabled' => true,
+)
+Request URL: /users/login
+Stack Trace:
+#0 /var/www/html/cakebudget/lib/Cake/Model/Datasource/DboSource.php(260): Mysql->connect()
+#1 /var/www/html/cakebudget/lib/Cake/Model/ConnectionManager.php(105): DboSource->__construct(Array)
+#2 /var/www/html/cakebudget/lib/Cake/Model/Model.php(3471): ConnectionManager::getDataSource('default')
+#3 /var/www/html/cakebudget/lib/Cake/Model/Model.php(1126): Model->setDataSource('default')
+#4 /var/www/html/cakebudget/lib/Cake/Model/Model.php(3493): Model->setSource('users')
+#5 /var/www/html/cakebudget/lib/Cake/Model/Model.php(2897): Model->getDataSource()
+#6 /var/www/html/cakebudget/lib/Cake/Model/Model.php(2869): Model->_readDataSource('first', Array)
+#7 /var/www/html/cakebudget/lib/Cake/Controller/Component/Auth/BaseAuthenticate.php(114): Model->find('first', Array)
+#8 /var/www/html/cakebudget/lib/Cake/Controller/Component/Auth/FormAuthenticate.php(81): BaseAuthenticate->_findUser('matt', 'episode1')
+#9 /var/www/html/cakebudget/lib/Cake/Controller/Component/AuthComponent.php(750): FormAuthenticate->authenticate(Object(CakeRequest), Object(CakeResponse))
+#10 /var/www/html/cakebudget/lib/Cake/Controller/Component/AuthComponent.php(597): AuthComponent->identify(Object(CakeRequest), Object(CakeResponse))
+#11 /var/www/html/cakebudget/app/Controller/UsersController.php(18): AuthComponent->login()
+#12 [internal function]: UsersController->login()
+#13 /var/www/html/cakebudget/lib/Cake/Controller/Controller.php(490): ReflectionMethod->invokeArgs(Object(UsersController), Array)
+#14 /var/www/html/cakebudget/lib/Cake/Routing/Dispatcher.php(185): Controller->invokeAction(Object(CakeRequest))
+#15 /var/www/html/cakebudget/lib/Cake/Routing/Dispatcher.php(160): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest), Object(CakeResponse))
+#16 /var/www/html/cakebudget/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#17 {main}
